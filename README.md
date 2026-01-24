@@ -2,6 +2,10 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=22208182)
 # AP CSA Project: Weekly Data Analyzer  
 
+**Student Name:** Salem Kiar  
+**Project Theme:** Sleep Tracker  
+**Description:** A program that tracks sleep hours for 7 days and provides personalized analysis and recommendations based on the user's sleep patterns, identifying the night with the least sleep and offering tailored tips for improvement.
+
 ---
 
 ## 📌 Project Overview

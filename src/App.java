@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 /**
- * Instructions:
- * - Complete the WeeklyData.java class first.
- * - Use this App class to collect user input and test your WeeklyData methods.
- * - Follow all TODOs carefully.
- * - Do NOT hard-code values — use loops and method calls.
+ * Main application class for the Sleep Tracker program.
+ * This program collects sleep data for 7 days and provides analysis
+ * with recommendations for improving sleep on the user's worst sleep night.
+ * 
+ * @author Student
  */
 public class App {
 
@@ -77,12 +77,12 @@ public class App {
         // -------------------------------------------------------------
         System.out.println("\n===== Sleep Analysis =====");
         System.out.println("Total sleep for the week: " + sleepData.getTotal() + " hours");
-        System.out.println("Average sleep per night: " + sleepData.getAverage() + " hours");
+        System.out.println("Average sleep per night: " + String.format("%.2f", sleepData.getAverage()) + " hours");
         System.out.println("Maximum sleep: " + sleepData.getMax() + " hours");
         System.out.println("Minimum sleep: " + sleepData.getMin() + " hours");
-
-        // Find the day with the least sleep and provide recommendations
-        System.out.println("\n===== Insights & Recommendations =====");
+        
+        System.out.println("\n===== All Daily Values =====");
+        System.out.print(sleepData.toString());
         
         int leastSleepDay = sleepData.getMinDay();
         double leastSleepHours = sleepData.getMin();

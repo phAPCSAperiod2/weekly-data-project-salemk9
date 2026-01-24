@@ -161,10 +161,10 @@ public class WeeklyData {
      */
     @Override
     public String toString() {
-        // TODO: Create a StringBuilder
-        // TODO: Loop through the data array
-        // TODO: Append each value with a day label (Day 1, Day 2, etc.)
-        // TODO: Return the completed String
-        return ""; // replace with your formatted output
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            sb.append(String.format("Day %d: %.2f%n", (i + 1), array[i]));
+        }
+        return sb.toString();
     }
 }
