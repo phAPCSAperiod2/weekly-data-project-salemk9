@@ -126,8 +126,28 @@ public class WeeklyData {
     }
 
 
+    // -------------------------------------------------------------    // getMinDay
     // -------------------------------------------------------------
-    // toString
+    /**
+     * Finds and returns the index of the day with the least sleep.
+     *
+     * @return the index (0-6) of the day with the minimum sleep,
+     *         or -1 if the array is empty
+     */
+    public int getMinDay() {
+        if (array.length == 0) {
+            return -1;
+        }
+        int minIndex = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[minIndex]) {
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
+
+    // -------------------------------------------------------------    // toString
     // -------------------------------------------------------------
     /**
      * Returns a formatted, multi-line String showing each day’s data.

@@ -81,9 +81,37 @@ public class App {
         System.out.println("Maximum sleep: " + sleepData.getMax() + " hours");
         System.out.println("Minimum sleep: " + sleepData.getMin() + " hours");
 
-
-// still need to finish results display, need to include specific insights and recommendations
-        System.out.println("\n===== Insights =====");
+        // Find the day with the least sleep and provide recommendations
+        System.out.println("\n===== Insights & Recommendations =====");
+        
+        int leastSleepDay = sleepData.getMinDay();
+        double leastSleepHours = sleepData.getMin();
+        
+        System.out.println("\nYour worst sleep night was: " + days[leastSleepDay]);
+        System.out.println("You got only " + leastSleepHours + " hours of sleep.");
+        
+        System.out.println("\n--- Tips to Improve Sleep on " + days[leastSleepDay] + " ---");
+        if (leastSleepHours < 4) {
+            System.out.println("• You had severe sleep deprivation. Prioritize:");
+            System.out.println("  - Go to bed 30 minutes earlier");
+            System.out.println("  - Eliminate all distractions 1 hour before bed");
+            System.out.println("  - Avoid caffeine after 2 PM");
+            System.out.println("  - Try melatonin or consult a sleep specialist");
+        } else if (leastSleepHours < 6) {
+            System.out.println("• You need more sleep. Try these strategies:");
+            System.out.println("  - Establish a consistent bedtime routine");
+            System.out.println("  - Reduce screen time 30 minutes before bed");
+            System.out.println("  - Keep your bedroom cool and dark");
+            System.out.println("  - Avoid large meals close to bedtime");
+        } else if (leastSleepHours < 7) {
+            System.out.println("• You're close to the recommended amount. Small improvements:");
+            System.out.println("  - Try going to bed 15 minutes earlier");
+            System.out.println("  - Practice relaxation techniques like deep breathing");
+            System.out.println("  - Limit interruptions during sleep hours");
+        } else {
+            System.out.println("• You're meeting healthy sleep recommendations!");
+            System.out.println("  - Keep up this sleep schedule on other nights too");
+        }
 
         // Close the scanner
         scanner.close();
